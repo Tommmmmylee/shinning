@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/publick.css" />
-		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/contact.css" />
 		<title></title>
 	</head>
 
@@ -34,7 +34,7 @@
 						<div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav nav-active">
 								<li>
-									<a href="#" class="nav-a nav-b">Home</a>
+									<a href="index2.html" class="nav-a">Home</a>
 								</li>
 								<li>
 									<a href="about.html" class="nav-a">About</a>
@@ -49,7 +49,7 @@
 									<a href="Bim.html" class="nav-a">Bim</a>
 								</li>
 								<li>
-									<a href="contact.html" class="nav-a">Contact</a>
+									<a href="#" class="nav-a nav-b">Contact</a>
 								</li>
 							</ul>
 						</div>
@@ -59,46 +59,52 @@
 			<!--导航栏结束-->
 
 			<!--正文-->
-			<div id="content" class="container" role = 'main'>
-				<ul class="center-block"><!--center-block 内容居中-->
-					<li class="center-block">
-						<div class="left-part content1">
-							<img src="img/home_one.png" alt="" class="pic-color"/>							
-						</div>
-						<div class="right-part">
-							<h3>RENDERINGS</h3>
-							<p>Masterplan、Public Building、commercial Building、Residential Building、Landscape Design</p>
-						</div>
+			<div id="content">
+				<ul class="contact">
+					<li>
+						<strong>Contacts:</strong>Eric Wang
 					</li>
-					<li class="clearfix">
-						<div class="left-part content2">
-							<img src="img/home_two.jpg" alt="" class="pic-color"/>
-						</div>
-						<div class="right-part text-right">
-							<h3>RENDERINGS</h3>
-							<p>Masterplan、Public Building、commercial Building、Residential Building、Landscape Design</p>
-						</div>
+					<li>
+						<img src="img/contact_mail.jpg" alt="" class="contact-img"/>
+						<strong>Email:</strong>eric@shining365.com
 					</li>
-					<li class="">
-						<div class="left-part content1">
-							<img src="img/homes_three.jpg" alt="" class="pic-color"/>
-						</div>
-						<div class="right-part">
-							<h3>RENDERINGS</h3>
-							<p>Masterplan、Public Building、commercial Building、Residential Building、Landscape Design</p>
-						</div>
+					<li>
+						<section>
+							<div>
+								<img src="img/contact_phone.png" alt=""  class="contact-img"/>
+							</div>
+							<div>
+								<p>+86 21 6598 6866-304</p>
+								<p>+86 21 6598 6866-304</p>
+							</div>
+						</section>
+						<section>
+							<div>
+								<img src="img/iphone.png" alt=""  class="contact-img"/>
+							</div>
+							<div>
+								<p>+86 138 1690 3400</p>
+							</div>
+						</section>
+						<section>
+							<div>
+								<img src="img/contact_add.png" alt=""  class="contact-img"/>
+							</div>
+							<div>
+								<p>1-5F.creative center building,No.2,1147 Lane,</p>
+								<p class="text-left">Siping Road,Yangpu District,Shanghai</p>
+							</div>
+						</section>
 					</li>
 				</ul>
+				<div class="bg">
+					<img src="img/contact-bg.jpg" alt="" />
+				</div>
 			</div>
 			<!--正文结束-->
 
 			<!--底部-->
 			<div id="footer">
-				<div class="email">
-					<a href="#">
-						<img src="img/mail.jpg" />
-					</a>
-				</div>
 				<div class="list">
 					<a href="#"><img src="img/facebook.jpg" alt="" /></a>
 					<a href="#"><img src="img/youtube.jpg" alt="" /></a>
@@ -113,17 +119,6 @@
 	<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-		//内容hover 效果
-		var arr3 = ['img/home_one.png','img/home_two.jpg','img/homes_three.jpg'];
-		var arr4 = ['img/home_one_h.png','img/home_two_h.png','img/homes_three_h.jpg'];
-		
-		$('#content img').hover(function(){
-			$(this).attr('src', arr4[$(this).index('#content img')]);
-		},function(){
-			$(this).attr('src', arr3[$(this).index('#content img')]);
-		})
-		//。。。。。。。
-		
 		//。。。底部图标hover效果。。。
 		var arr1 = ['img/mail_h.jpg', 'img/facebook_h.jpg', 'img/youtube_h.jpg', 'img/linkedln_h.jpg', 'img/twitter_h.jpg'];
 		var arr2 = ['img/mail.jpg', 'img/facebook.jpg', 'img/youtube.jpg', 'img/linkedln.jpg', 'img/twitter.jpg'];

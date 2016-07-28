@@ -1,0 +1,48 @@
+#content {
+	width: 100%;
+	background-image: url(../img/world_map.png);
+	/*background-size: 100% 100%;*/
+	background-position: 50% 0%;
+	background-repeat: no-repeat;
+	background-color: #99B4CB;
+	margin-bottom: 5%;
+}
+
+#content .about-content {
+	width: 1000px;
+}
+
+#content .about-content .text {
+	width: 50%;
+	font-size: 1.5rem;
+	padding: 10% 0 0;
+	/*单词每个字母读*/
+	word-break: break-all;
+}
+
+#content .about-content .text .text-left {
+	margin-bottom: 9%;
+}
+
+#content .about-content .logo {
+	width: 100%;
+	padding-bottom: 7%;
+}
+
+#content .about-content .logo img {
+	padding-right: 3%;
+}
+
+@media screen and (max-width:770px) {
+	#content .about-content {
+		width: 100%;
+	}
+	#content .about-content .text {
+		width: 100%;
+	}
+	#content .about-content .logo img {
+		width: 20%;
+		height: 50px;
+		margin: 2%;
+	}
+}

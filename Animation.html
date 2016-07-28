@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/publick.css" />
-		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/Animation.css" />
 		<title></title>
 	</head>
 
@@ -34,7 +34,7 @@
 						<div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav nav-active">
 								<li>
-									<a href="#" class="nav-a nav-b">Home</a>
+									<a href="index2.html" class="nav-a">Home</a>
 								</li>
 								<li>
 									<a href="about.html" class="nav-a">About</a>
@@ -43,7 +43,7 @@
 									<a href="rendering.html" class="nav-a">Rendering</a>
 								</li>
 								<li>
-									<a href="Animation.html" class="nav-a">3D Animation</a>
+									<a href="#" class="nav-a nav-b">3D Animation</a>
 								</li>
 								<li>
 									<a href="Bim.html" class="nav-a">Bim</a>
@@ -59,36 +59,86 @@
 			<!--导航栏结束-->
 
 			<!--正文-->
-			<div id="content" class="container" role = 'main'>
-				<ul class="center-block"><!--center-block 内容居中-->
-					<li class="center-block">
-						<div class="left-part content1">
-							<img src="img/home_one.png" alt="" class="pic-color"/>							
+			<div id="content">
+				<!--外层-->
+				<div class="animate-content">	
+					<!--内容-->
+					<div class="inner">
+						<!--视频-->
+						<video id='vae' src="http://122.72.0.153/hc.yinyuetai.com/uploads/videos/common/F4F6014E67D1819AA5964847178D8059.flv?sc=58cf2e5daa31d6b6" poster="img/2-150Z2105915292.jpg" x-webkit-airplay="true" webkit-playsinline="true"></video>
+					</div>
+					<!--播放按钮-->
+					<img src="img/play.png" alt="" class="pic" />
+					<!--文本-->
+					<p class="text">Sichuan Province-Commercial Rea</p>
+				</div>
+				<!--外层结束-->
+
+				<section>
+					<a href="###">
+						<div class="3D">
+							<img src="img/play_small_h.png" alt="" />
 						</div>
-						<div class="right-part">
-							<h3>RENDERINGS</h3>
-							<p>Masterplan、Public Building、commercial Building、Residential Building、Landscape Design</p>
+						<img src="img/1-1510121R410H3.jpg" alt="" />
+						<p>Commercial Rea</p>
+					</a>
+					<a href="###">
+						<div class="3D">
+							<img src="img/play_small_h.png" alt="" />
 						</div>
-					</li>
-					<li class="clearfix">
-						<div class="left-part content2">
-							<img src="img/home_two.jpg" alt="" class="pic-color"/>
+						<img src="img/1-1510121SHX34.jpg" alt="" />
+						<p>Commercial Rea</p>
+					</a>
+					<a href="###">
+						<div class="3D">
+							<img src="img/play_small_h.png" alt="" />
 						</div>
-						<div class="right-part text-right">
-							<h3>RENDERINGS</h3>
-							<p>Masterplan、Public Building、commercial Building、Residential Building、Landscape Design</p>
+						<img src="img/1-1510121T91XV.jpg" alt="" />
+						<p>Commercial Rea</p>
+					</a>
+					<a href="###">
+						<div class="3D">
+							<img src="img/play_small_h.png" alt="" />
 						</div>
-					</li>
-					<li class="">
-						<div class="left-part content1">
-							<img src="img/homes_three.jpg" alt="" class="pic-color"/>
+						<img src="img/1-1510121R410H3.jpg" alt="" />
+						<p>Commercial Rea</p>
+					</a>
+					<a href="###">
+						<div class="3D">
+							<img src="img/play_small_h.png" alt="" />
 						</div>
-						<div class="right-part">
-							<h3>RENDERINGS</h3>
-							<p>Masterplan、Public Building、commercial Building、Residential Building、Landscape Design</p>
+						<img src="img/1-1510121SHX34.jpg" alt="" />
+						<p>Commercial Rea</p>
+					</a>
+					<a href="###">
+						<div class="3D">
+							<img src="img/play_small_h.png" alt="" />
 						</div>
-					</li>
-				</ul>
+						<img src="img/1-1510121T91XV.jpg" alt="" />
+						<p>Commercial Rea</p>
+					</a>
+					<a href="###">
+						<div class="3D">
+							<img src="img/play_small_h.png" alt="" />
+						</div>
+						<img src="img/1-1510121R410H3.jpg" alt="" />
+						<p>Commercial Rea</p>
+					</a>
+					<a href="###">
+						<div class="3D">
+							<img src="img/play_small_h.png" alt="" />
+						</div>
+						<img src="img/1-1510121SHX34.jpg" alt="" />
+						<p>Commercial Rea</p>
+					</a>
+					<a href="###">
+						<div class="3D">
+							<img src="img/play_small_h.png" alt="" />
+						</div>
+						<img src="img/1-1510121T91XV.jpg" alt="" />
+						<p>Commercial Rea</p>
+					</a>
+				</section>
 			</div>
 			<!--正文结束-->
 
@@ -113,17 +163,26 @@
 	<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-		//内容hover 效果
-		var arr3 = ['img/home_one.png','img/home_two.jpg','img/homes_three.jpg'];
-		var arr4 = ['img/home_one_h.png','img/home_two_h.png','img/homes_three_h.jpg'];
-		
-		$('#content img').hover(function(){
-			$(this).attr('src', arr4[$(this).index('#content img')]);
-		},function(){
-			$(this).attr('src', arr3[$(this).index('#content img')]);
+		var video1 = document.getElementById("vae");
+		var pic = document.getElementsByClassName('pic')[0];
+		var text = document.getElementsByClassName('text')[0];
+
+		pic.onclick = function() {
+			if(video1.paused) {
+				video1.play();
+				pic.style.display = 'none';
+				text.style.display = 'none';
+			} else {
+				video1.pause();
+			}
+		}
+
+		$('section a').hover(function() {
+			$(this).find($('.3D img')).attr('src', 'img/play_small_b.png')
+		}, function() {
+			$('.3D img').attr('src', 'img/play_small_h.png')
 		})
-		//。。。。。。。
-		
+
 		//。。。底部图标hover效果。。。
 		var arr1 = ['img/mail_h.jpg', 'img/facebook_h.jpg', 'img/youtube_h.jpg', 'img/linkedln_h.jpg', 'img/twitter_h.jpg'];
 		var arr2 = ['img/mail.jpg', 'img/facebook.jpg', 'img/youtube.jpg', 'img/linkedln.jpg', 'img/twitter.jpg'];

@@ -1,0 +1,152 @@
+#content {
+	width: 100%;
+	margin-top: -10px;
+}
+#content .bim-content .bim1 {
+	background: url(../img/building1-half-t.png) no-repeat;
+	background-color: gainsboro;
+	background-position: 110% 100%;
+	background-size: 45% 80%;
+}
+
+#content .li1 section {
+	width: 45%;
+	margin: 0 10%;
+	padding-top: 5%;
+	/*padding-bottom: 15%;*/
+}
+#content .li1 .bim-active {
+	padding-bottom: 15%;
+}
+#content .li1 .p {
+	width: 75%;
+	text-align: left;
+}
+
+#content .li1 h2,
+#content .li1 h3 {
+	display: inline-block;
+	font-size: 2.5rem;
+}
+
+#content .li1 h2 {
+	width: 30px;
+	text-align: center;
+	border-radius: 5px;
+	border: 1px solid black;
+	margin-bottom: 5%;
+}
+
+#content .li1 span {
+	display: inline-block;
+	padding-bottom: 12%;
+}
+
+#content .bim1 section div {
+	margin-left: 8%;
+	width: 90%;
+}
+
+#content .bim1 section div img {
+	width: 33%;
+	float: left;
+}
+
+#content .bim-content .bim2 {
+	background: url(../img/building1-half-b.png) no-repeat;
+	background-position: 99.5% 0%;
+	background-size: 45% 80%;
+}
+
+#content .bim2 section div {
+	width: 100%;
+}
+
+#content .bim2 section div img {
+	width: 45%;
+}
+
+#content .bim-content .bim3 {
+	background: url(../img/building2-half-t.png) no-repeat;
+	background-color: gainsboro;
+	background-position: 0% 100%;
+	background-size: 40% 96%;
+}
+
+#content .bim-content .bim3 section {
+	display: inline-block;
+	float: right;
+	margin: 3% 17%;
+}
+
+#content .bim-content .bim3 span {
+	padding-bottom: 5%;
+}
+
+#content .bim-content .bim3 span {
+	width: 50%;
+}
+
+#content .bim3 section div img {
+	width: 45%;
+}
+#content .bim-content .bim4 {
+	width: 100%;
+	background: url(../img/building2-half-b.png) no-repeat;
+	background-position: 8.5% 0%;
+	background-size: 40% 58%;
+}
+#content .bim-content .bim4 section {
+	width: 90%;
+}
+#content .bim-content .bim4 .p {
+	float: left;
+	width: 45%;
+	margin-left: 5%;
+	vertical-align: bottom;
+}
+#content .bim-content .bim4 .p img,#content .bim-content .bim4 .p span{
+	width: 75%;
+	padding-bottom: 2%;
+}
+#content .bim-content .bim4 .pic {
+	float: right;
+	width: 50%;
+	vertical-align: bottom;
+}
+#content .bim-content .bim4 .pic img {
+	width: 100%;
+}
+content .bim4 .bim-active {
+	padding-bottom: 0;
+}
+#content .bim-content .bim5 {
+	background: url(../img/building3-half-b.png) no-repeat;
+	background-color: gainsboro;
+	background-position: 88.5% 0%;
+	background-size: 45% 90%;
+}
+#content .bim-content .bim5 .p {
+	padding: 30% 0;
+}
+@media screen and (max-width: 770px) {
+	#content .li1 .bim-active {
+		width: 55%;
+		margin: 0 0 0 10px;
+		padding-top: 10%;
+		padding-bottom: 10%;
+	}
+	#content .li1 {
+		background-position: 120% 100%;
+	}
+	#content .li1 h2,
+	#content .li1 h3 {
+		font-size: 1.4rem;
+	}
+	#content .li1 span {
+		font-size: 1.2rem;
+	}
+	#content .bim-content .bim3 span {
+		width: 75%;
+	}
+}

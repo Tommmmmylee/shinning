@@ -1,0 +1,45 @@
+#wrap {
+	width: 100%;
+	height: 100%;
+}
+#nav {
+	width: 100%;
+	background-color: #1b1b1b;
+}
+#wrap .nav-active {
+	margin-top: 20px;
+	line-height: 70px;	
+}
+#wrap .nav-active a {	
+	padding: 0px 15px;
+}
+#wrap .nav-active .nav-b {
+	border-radius: 5px;
+	border: 1px solid white;
+	color: white;
+}
+#wrap .nav-active .nav-a:hover {
+	border-radius: 5px;
+	border: 1px solid white;
+	color: white;
+}
+#wrap .nav-button {
+	margin-top: 15px;
+}
+
+/*底部*/
+#footer {
+	width: 100%;	
+}
+.email,.list,.text {
+	width: 100%;
+	text-align: center;
+	padding-bottom: 10px;
+}
+.email a,.list a {
+	display: inline-block;
+	width: 25px;
+}
+.email img,.list img {
+	width: 100%;
+}

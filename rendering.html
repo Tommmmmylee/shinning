@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/idangerous.swiper.css" />
+		<link rel="stylesheet" type="text/css" href="css/publick.css" />
+		<link rel="stylesheet" type="text/css" href="css/rendering.css" />
+		<title></title>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<!--导航栏-->
+			<div id="nav">
+				<!--navbar-inverse 黑色导航-->
+				<nav class="navbar navbar-inverse navbar-default clearfix">
+					<div class="container">
+						<!--container 居中样式-->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed nav-button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+							<a class="navbar-brand" href="#">
+								<img src="img/shininglogo.png" alt="" />
+							</a>
+						</div>
+						<!--向右 navbar-right-->
+						<div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav nav-active">
+								<li>
+									<a href="index2.html" class="nav-a">Home</a>
+								</li>
+								<li>
+									<a href="about.html" class="nav-a">About</a>
+								</li>
+								<li>
+									<a href="#" class="nav-a nav-b">Rendering</a>
+								</li>
+								<li>
+									<a href="Animation.html" class="nav-a">3D Animation</a>
+								</li>
+								<li>
+									<a href="Bim.html" class="nav-a">Bim</a>
+								</li>
+								<li>
+									<a href="contact.html" class="nav-a">Contact</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<!--导航栏结束-->
+
+			<!--正文-->
+			<div id="content">
+				<!--大图滚动-->
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="img/SHINING (14).jpg" alt="" />
+						</div>
+						<div class="swiper-slide">
+							<img src="img/SHINING (15).jpg" alt="" />
+						</div>
+						<div class="swiper-slide">
+							<img src="img/SHINING (13).jpg" alt="" />
+						</div>
+					</div>
+					<div class="pagination"></div>
+				</div>
+				<!--大图滚动结束-->
+
+				<!--瀑布流-->
+				<div id="waterFall">
+					<!--<div></div>
+					<div></div>
+					<div></div>-->
+				</div>
+				<!--瀑布流结束-->
+			</div>
+			<!--正文结束-->
+
+			<!--底部-->
+			<div id="footer">
+				<div class="email">
+					<a href="#">
+						<img src="img/mail.jpg" />
+					</a>
+				</div>
+				<div class="list">
+					<a href="#"><img src="img/facebook.jpg" alt="" /></a>
+					<a href="#"><img src="img/youtube.jpg" alt="" /></a>
+					<a href="#"><img src="img/linkedln.jpg" alt="" /></a>
+					<a href="#"><img src="img/twitter.jpg" alt="" /></a>
+				</div>
+				<div class="text">Copyright © 1998-2015 shining Group</div>
+			</div>
+			<!--底部结束-->
+		</div>
+	</body>
+	<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/idangerous.swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		new Swiper('.swiper-container', {
+			speed: 400,
+			loop: true,
+			autoplay: 1000,
+			autoplayDisableOnInteraction: false,
+			pagination: '.pagination',
+			calculateHeight: true, //自动计算高度，如果不加这句，你可能永远都找不到这分页器！你没看错，是！永远！
+		})
+
+		//。。。底部图标hover效果。。。
+		var arr1 = ['img/mail_h.jpg', 'img/facebook_h.jpg', 'img/youtube_h.jpg', 'img/linkedln_h.jpg', 'img/twitter_h.jpg'];
+		var arr2 = ['img/mail.jpg', 'img/facebook.jpg', 'img/youtube.jpg', 'img/linkedln.jpg', 'img/twitter.jpg'];
+		$('#footer img').hover(function() {
+				$(this).attr('src', arr1[$(this).index('#footer img')]);
+				console.log($(this).index()); //0；因为5个img在两个不同的父级类下，当输出的时候只找到第一个类下的img
+				//index()里加了参数会根据整个文件中寻找同标签的元素
+				//想要找某个或某段的元素，需要加定向选择，比如index('#footer img')，footer下的img
+				console.log($(this).index('#footer img'));
+			}, function() {
+				$(this).attr('src', arr2[$(this).index('#footer img')]);
+			})
+			//。。。。。。。。
+
+		//定位的方式
+		//1.定义一个变量，用来保存瀑布流里面每一列的高度
+		var arrH = [];
+		var divsW = 0;
+		//2.自动创建div；下拉 ——》没有了-->自动创建
+		//参数说明：num 要创建多少 个div
+		function createDivFn(num) {
+			//要创建多少个
+			//遍历创建div
+			for(var i = 0; i < num; i++) {
+				//创建div
+				var div = document.createElement('div');
+				//随机高度
+				var rndHeight = parseInt(Math.random() * 100) + 80;
+				//改变div的样式
+				div.innerHTML = '<img src="img/'+(i+1)+'.jpg" />';
+				div.style.height = rndHeight + 'px';
+				//把创建出来的div添加到body
+				document.getElementById("waterFall").appendChild(div);
+				//document.body.appendChild(div);
+			}
+		}
+
+		//createDivFn(10);
+		var sum = 3;
+		//3.改变所有div的位置
+		function changeDivPosFn() {
+			//获取到所有的div
+			var divs = document.getElementById("waterFall").getElementsByTagName('div');
+			//console.log(divs[0].offsetWidth);
+			divsW = divs[0].offsetWidth;
+			//一个一个的改变位置；并不知道窗口能容纳多少列的div
+			//先得到窗口（浏览器）的宽度
+			var windowW = document.documentElement.clientWidth;
+			
+			console.log(windowW);
+			if(windowW < 770){
+				sum = 2;
+			}else{
+				sum = 4;
+			}
+			//document.body.clientWidth中的body对于浏览器的获取不一样
+			//计算窗口能容纳多少个列
+			//说明：202是div的宽度+border
+//			var divNumber = parseInt(windowW / 202);
+
+			//通过遍历来改变所有div的位置
+			for(var i = 0; i < divs.length; i++) {
+				//先判断是否第一列的div
+				if(i < sum) { //left会根据i变化
+					//改变第一列div的位置
+//					i = 4;
+					divs[i].style.left = i * divsW + 'px';
+					divs[i].style.top = 0;
+
+					//保存每一列的高度 
+					arrH[i] = divs[i].offsetHeight;
+				} else { //非第一行的div					
+					//找出每列中位置最小的下标
+//					i = 2;
+					var minIndex = findMinHeightFn(arrH);
+					//改变div 的位置
+					divs[i].style.left = minIndex * divsW + 'px';
+					//68行，获取最小下标的高度
+					divs[i].style.top = arrH[minIndex] + 'px';
+
+					//保存每一列的高度
+					arrH[minIndex] += divs[i].offsetHeight;
+				}
+			}
+		}
+		//4.找出每列中位置最小的下标
+		function findMinHeightFn(arr){
+			//先得到数组中的第一个
+			var min = arr[0];
+			//存储最小位置的下标
+			var index = 0;
+			
+			for(var i = 0; i < arr.length; i++){
+				if(arr[i] < min){
+					min = arr[i];
+					index = i;
+				}
+			}
+			
+			//最后返回这个最小位置的下标
+			return index;
+		}
+		
+		function findMaxHeightFn(arr){
+			//先得到数组中的第一个
+			var max = arr[0];
+			//存储最小位置的下标
+			var index = 0;
+			
+			for(var i = 0; i < arr.length; i++){
+				if(arr[i] > max){
+					max = arr[i];
+					index = i;
+				}
+			}
+			
+			//最后返回这个最小位置的下标
+			return index;
+		}
+		//5.当浏览器下拉到底部的时候
+//		window.onscroll = function(){
+//			//得到浏览器scrollTop的值
+//			//浏览器下拉卷掉的那部分
+//			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+//			
+//			//得到浏览器的高度
+//			var windowH = document.documentElement.clientHeight;
+//			
+//			//判断到底了:获取最小位置
+//			if(arrH[findMinHeightFn(arrH)] - windowH < scrollTop){
+//				//到底就创建div
+//				createDivFn(20);
+//				//改变div的位置
+//				changeDivPosFn();
+//			}
+//		}
+		
+		window.onresize = function () { 
+			
+			document.getElementById("waterFall").innerHTML = "";
+			createDivFn(20);
+			changeDivPosFn();
+			document.getElementById('waterFall').style.height = arrH[findMaxHeightFn(arrH)] + 'px';
+		} 
+		
+		createDivFn(20);
+		changeDivPosFn();
+		document.getElementById('waterFall').style.height = arrH[findMaxHeightFn(arrH)] + 'px';
+	</script>
+
+</html>

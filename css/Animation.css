@@ -1,0 +1,83 @@
+#content {
+	width: 100%;
+}
+#content .animate-content {
+	width: 100%;
+	background-color: black;
+	position: relative;
+}
+#content .inner {
+	width: 90%;
+	margin: 0 auto;
+}
+#content .inner video{
+	width: 100%;
+}
+#content .pic {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: 45%;
+}
+#content .animate-content p {
+	width: 100%;
+	text-align: center;
+	font-size: 3rem;
+	background-color: rgba(0,0,0,0.4);
+	position: absolute;
+	bottom: 0;
+	margin: 0;
+}
+
+#content section{
+	width: 98%;
+	margin-left: 2%;
+	margin-top: 2%;
+}
+#content section a {
+	display: inline-block;
+	width: 31%;
+	position: relative;
+	text-decoration: none;
+	text-align: center;
+	margin-bottom: 3%;
+}
+#content section a:nth-child(3n-1){
+	margin-left: 2%;
+	margin-right: 2%;
+}
+#content section a div {
+	width: 20%;
+	position: absolute;
+	left: 38%;
+	top: 25%;
+	z-index: 100;
+}
+#content section a img {
+	width: 100%;
+}
+@media screen and (max-width: 750px) {
+	#content .animate-content p {
+		font-size: 1.4rem;
+	}
+	#content .pic {
+		width: 30px;
+		height: 30px;
+	}
+	#content section p {
+		font-size: 1.2rem;
+		margin-bottom: 0;
+	}
+	#footer .text {
+		font-size: 1rem;
+	}
+	.email a,.list a {
+		width: 20px;
+	}
+	.email,.list,.text {
+		padding-bottom: 4px;
+	}
+}
