@@ -33,6 +33,9 @@
 #content .contact .contact-img {
 	margin-bottom: 10px;
 }
+#content .bg {
+	width: 100%;
+}
 #content .bg img {
 	width: 100%;
 }

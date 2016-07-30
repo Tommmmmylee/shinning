@@ -256,12 +256,12 @@
 //				changeDivPosFn();
 //			}
 //		}
-		
-		window.onresize = function () { 
-			
+		//浏览器拉伸
+		window.onresize = function () { 			
 			document.getElementById("waterFall").innerHTML = "";
 			createDivFn(20);
 			changeDivPosFn();
+			//定位将所有图片脱离文档流，#waterFall高度为0，将图片流最大的高度赋予给#waterFall
 			document.getElementById('waterFall').style.height = arrH[findMaxHeightFn(arrH)] + 'px';
 		} 
 		
